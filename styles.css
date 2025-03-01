@@ -1,0 +1,439 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Use Roboto font for body */
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    background-color: #FAF9F6; /* Adjusted background color */
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #007BFF; /* Blue background */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 50px 20px;
+}
+.hero h1 {
+    font-family: 'Merriweather', serif; /* Use Merriweather for headings */
+    font-size: 2.5em;
+    margin: 0 0 10px;
+}
+.hero p {
+    font-size: 1.2em;
+    margin: 0 0 20px;
+}
+.cta-button {
+    background-color: #0056b3; /* Darker blue for buttons */
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background-color: #007BFF; /* Blue background */
+    color: #ffffff; /* White text */
+    text-align: center;
+}
+
+/* Courses Section */
+.courses {
+    padding: 50px 20px;
+    text-align: center;
+}
+.courses .course {
+    margin: 20px 0;
+}
+.courses h3 {
+    font-family: 'Merriweather', serif; /* Use Merriweather for course titles */
+    color: #007BFF; /* Blue for course titles */
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 50px 20px;
+    background-color: #007BFF; /* Blue background */
+    color: #ffffff; /* White text */
+    text-align: center;
+}
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+.contact form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.contact input, .contact textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #007BFF; /* Blue border */
+    border-radius: 5px;
+}
+.contact button {
+    background-color: #0056b3; /* Darker blue for button */
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Blue background */
+    color: #ffffff; /* White text */
+}
+
+/* General Styles for Images */
+.hero-image {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.section-image, .course-image {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    max-width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Course Images */
+.course {
+    margin: 20px 0;
+    text-align: center;
+}
+.course img {
+    max-width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: #007BFF; /* Blue background */
+    color: #ffffff; /* White text */
+    padding: 20px 30px; /* Increased padding for better height */
+    position: fixed; /* Fixed to the top */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width of the page */
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Slight shadow for separation */
+    display: flex; /* Flex layout for better alignment */
+    justify-content: space-between; /* Space between logo and menu items */
+    align-items: center; /* Align items vertically */
+    transition: top 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Container for the Navbar */
+.navbar .container {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Align vertically */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the content */
+}
+
+/* Adjust the Logo */
+.navbar .logo {
+    font-size: 1.4rem; /* Slightly larger font for logo */
+    font-weight: bold; /* Bold font for the logo */
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline */
+    display: flex;
+    align-items: center; /* Vertically center the logo */
+}
+
+.navbar .logo img {
+    height: 50px; /* Control the logo height */
+    margin-right: 20px; /* Adjust space between logo image and text */
+}
+/* Navbar Styles */
+.navbar {
+    background: #007BFF; /* Blue background */
+    color: #ffffff; /* White text */
+    padding: 20px 30px; /* Padding for better height */
+    position: fixed; /* Fixed to the top */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width of the page */
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Slight shadow for separation */
+    display: flex; /* Flex layout for better alignment */
+    justify-content: space-between; /* Space between logo and menu items */
+    align-items: center; /* Align items vertically */
+    transition: top 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Container for the Navbar */
+.navbar .container {
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space between logo and menu */
+    align-items: center; /* Align vertically */
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the content */
+}
+
+/* Adjust the Logo to be aligned to the left */
+.navbar .logo {
+    font-size: 1.4rem; /* Slightly larger font for logo */
+    font-weight: bold; /* Bold font for the logo */
+    color: #ffffff; /* White text */
+    text-decoration: none; /* Remove underline */
+    display: flex;
+    align-items: center; /* Vertically center the logo */
+    margin-right: auto; /* Push the logo to the left */
+}
+
+.navbar .logo img {
+    height: 50px; /* Control the logo height */
+    margin-right: 10px; /* Adjust space between logo image and text */
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+    display: flex; /* Flex layout for menu items */
+    list-style: none; /* Remove bullets */
+    margin: 0;
+    padding: 0; /* Remove padding */
+}
+
+.navbar-menu li {
+    margin-right: 20px; /* Space between menu items */
+}
+
+.navbar-menu a {
+    color: #ffffff; /* White text color */
+    padding: 14px 18px; /* Larger clickable area */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.1rem; /* Slightly larger font size */
+    transition: background 0.3s ease, color 0.3s ease; /* Smooth hover effect */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.navbar-menu a:hover {
+    background: #0056b3; /* Darker blue on hover */
+    color: #ffffff; /* White text */
+}
+
+/* Mobile Hamburger Menu */
+.hamburger {
+    display: none; /* Hide hamburger by default */
+    cursor: pointer;
+    flex-direction: column; /* Stack the lines vertically */
+    gap: 5px; /* S/pace between lines */
+    width: 30px; /* Increased icon size */
+    height: 30px; /* Increased icon size */
+}
+
+.hamburger span {
+    background-color: #ffffff; /* White lines */
+    width: 100%; /* Full width */
+    height: 3px; /* Line thickness */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .navbar .container {
+        flex-direction: column; /* Stack logo and menu vertically on mobile */
+        align-items: flex-start; /* Align to the left */
+    }
+
+    .navbar-menu {
+        display: none; /* Hide the menu by default on mobile */
+        width: 100%; /* Full width */
+        flex-direction: column; /* Stack items vertically */
+        gap: 15px; /* Increase space between items */
+        text-align: left; /* Align to the left */
+        padding: 20px 0;
+        background: #007BFF; /* Blue background for mobile menu */
+        position: absolute; /* Position it off-screen initially */
+        top: 70px; /* Position it below the navbar */
+        left: 0;
+        transform: translateY(-100%); /* Hide initially */
+        transition: transform 0.3s ease-in-out; /* Smooth transition */
+    }
+
+    .navbar-menu.active {
+        display: flex; /* Show when active */
+        transform: translateY(0); /* Slide down */
+    }
+
+    .navbar-menu a {
+        padding: 12px 20px; /* Adjust padding for mobile */
+        width: 100%; /* Full width of the menu items */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+}
+
+/* Form Section */
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 270px;
+}
+
+.form-container .form-row {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.form-container .form-row input {
+    width: 100%;
+    height: 30px;
+    margin: 0;
+    padding: 5px;
+    outline: none;
+    border: 2px solid #dddddd;
+}
+
+.form-container .form-row input.valid {
+    border-color: #000000;
+}
+
+.form-container .form-row input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin: 0 10px 0 0;
+    padding: 0;
+    border: 2px solid #dddddd;
+}
+
+.form-container .form-row input[type="submit"] {
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    background-color: #eeeeee;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #dddddd;
+}
+
+.form-container label,
+.form-container input,
+.form-container input::placeholder {
+    font-size: 15px;
+    font-family: inherit;
+}
+
+/* SVG Styling */
+svg {
+    width: 1000px;
+    pointer-events: none;
+    stroke-width: 1.2px;
+    stroke: #000000;
+    fill: none;
+}
+/* Multiple images section */
+.multiple-images {
+    background-color: #f4f4f4; /* Light background color */
+    padding: 20px 0; /* Some padding around the images */
+}
+
+.image-container {
+    display: flex; /* Flex layout to align images in a row */
+    justify-content: center; /* Center the images */
+    gap: 20px; /* Space between images */
+}
+
+.image-item {
+    width: 30%; /* Each image takes up 30% of the container's width */
+    height: auto; /* Maintain the aspect ratio of images */
+    border-radius: 8px; /* Slight border radius for rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a slight shadow for effect */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.image-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-item {
+        width: 80%; /* On smaller screens, images take up more width */
+    }
+}
+/* Image Slider Styles */
+.image-slider {
+    width: 100%; /* Full width */
+    overflow: hidden; /* Hide images outside the container */
+}
+
+.slider-container {
+    display: flex; /* Use flexbox to arrange the slides horizontally */
+    width: 300%; /* 3 images, each 100%, so we need to set the width to 300% */
+    transition: transform 1s ease-in-out; /* Smooth transition for sliding effect */
+}
+
+.slider-slide {
+    width: 100%; /* Each slide takes up 100% of the container width */
+    height: 100vh; /* Full viewport height */
+}
+
+.slider-slide img {
+    width: 100%; /* Images fill the entire slide */
+    height: 100%; /* Full height to maintain the aspect ratio */
+    object-fit: cover; /* Ensure the image covers the slide area */
+}
+
+/* Optional: Add arrows for manual navigation */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.slider-arrow-left {
+    left: 10px;
+}
+
+.slider-arrow-right {
+    right: 10px;
+}
+.login-button {
+    color: white;
+    background-color: teal;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.login-button:hover {
+    background-color: darkcyan;
+}

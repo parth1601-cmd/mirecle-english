@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miracle English Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #333;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .navbar .nav-logo {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-menu li {
+            margin: 0 15px;
+        }
+
+        .navbar-menu a {
+            font-size: 1rem;
+            color: #2c3e50;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-menu a:hover {
+            color: #3498db;
+        }
+
+        .login-button {
+            background: #3498db;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .login-button:hover {
+            background: #2980b9;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background: #2c3e50;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #2980b9;
+        }
+
+        /* Carousel Styles */
+        .carousel {
+            position: relative;
+            max-width: 80%;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-images img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-controls button {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .carousel-controls button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* About Section */
+        .about, .courses, .testimonials, .contact {
+            padding: 60px 20px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            margin: 20px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about img, .course-image, .section-image {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        /* Courses Section */
+        .courses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .course {
+            flex: 1 1 30%;
+            margin: 10px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .course:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Testimonials Section */
+        .testimonials p {
+            font-style: italic;
+            color: #555;
+        }
+
+        /* Contact Section */
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact input, .contact textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact button {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact button:hover {
+            background: #2980b9;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar-menu {
+                display: none;
+                flex-direction: column;
+                background: rgba(255, 255, 255, 0.9);
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                border-radius: 5px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .navbar-menu.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .courses {
+                flex-direction: column;
+            }
+
+            .course {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="images/OIP (2).jpeg" alt="Miracle English Academy Logo" class="nav-logo">
+                Miracle English Academy Betul
+            </a>
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="login.html" class="login-button">Login</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to Miracle English Academy</h1>
+            <p>Your gateway to mastering English with confidence.</p>
+            <a href="#courses" class="cta-button">Explore Courses</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Carousel Section -->
+        <section class="carousel">
+            <div class="carousel-images">
+                <img src="images/4299503.webp" alt="Classroom 1">
+                <img src="images/Mountain-Lake-Reflection-in-Nature-Scenery-4K-Wallpaper.jpg" alt="Classroom 2">
+                <img src="images/mountain-scenery-morning-sun-rays-4k-kf.jpg" alt="Classroom 3">
+                <img src="images/OIP (3).jpeg" alt="Classroom 4">
+                <img src="images/new-image1.jpg" alt="Classroom 5">
+                <img src="images/new-image2.jpg" alt="Classroom 6">
+            </div>
+            <div class="carousel-controls">
+                <button onclick="prevImage()">&#10094;</button>
+                <button onclick="nextImage()">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <h2>About Us</h2>
+            <p>Miracle English Academy is dedicated to empowering students with excellent English communication skills.</p>
+            <img src="images/OIP.jpeg" alt="Classroom environment" class="section-image">
+        </section>
+
+        <!-- Courses Section -->
+        <section id="courses" class="courses">
+            <h2>Our Courses</h2>
+            <div class="course">
+                <img src="images/OIP (1).jpeg" alt="Spoken English class" class="course-image">
+                <h3>Spoken English</h3>
+                <p>Enhance your speaking skills for daily conversations.</p>
+            </div>
+            <div class="course">
+                <img src="images/business-english.jpg" alt="Business English class" class="course-image">
+                <h3>Business English</h3>
+                <p>Learn professional English for your career growth.</p>
+            </div>
+            <div class="course">
+                <img src="images/ielts.jpg" alt="IELTS preparation class" class="course-image">
+                <h3>IELTS Preparation</h3>
+                <p>Score high with our expert training programs.</p>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials" id="testimonials">
+            <h2>What Our Students Say</h2>
+            <img src="images/testimonials.jpg" alt="Happy students" class="section-image">
+            <p>"This academy transformed my confidence!" – Student A</p>
+            <p>"Amazing teaching methods and supportive staff!" – Student B</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <img src="images/contact.jpg" alt="Contact us" class="section-image">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Miracle English Academy. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Carousel Functionality
+        let currentIndex = 0;
+        const images = document.querySelector('.carousel-images');
+        const imageCount = images.children.length;
+
+        function showImage(index) {
+            images.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % imageCount;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + imageCount) % imageCount;
+            showImage(currentIndex);
+        }
+
+        setInterval(nextImage, 4000);
+
+        // Hamburger Menu Toggle
+        function toggleMenu() {
+            const navbarMenu = document.getElementById('navbarMenu');
+            navbarMenu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miracle English Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Styles for Carousel */
+        .carousel {
+            position: relative;
+            max-width: 80%; /* Adjusts overall carousel width */
+            margin: 20px auto; /* Centers the carousel */
+            overflow: hidden;
+            border-radius: 10px; /* Rounds the corners of the carousel */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-images img {
+            width: 100%; /* Ensures images take up the full carousel width */
+            margin: 0 5px; /* Adds spacing between images */
+            border-radius: 10px; /* Rounds the corners of each image */
+            object-fit: cover; /* Ensures images fill the container proportionally */
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-controls button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .carousel-controls button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        body {
+            background-image: url('images/background.jpg'); /* Add a background image */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <section class="carousel">
+        <div class="carousel-images">
+            <img src="images/4299503.webp" alt="Classroom 1">
+            <img src="images/Mountain-Lake-Reflection-in-Nature-Scenery-4K-Wallpaper.jpg" alt="Classroom 2">
+            <img src="images/mountain-scenery-morning-sun-rays-4k-kf.jpg" alt="Classroom 3">
+            <img src="images/OIP (3).jpeg" alt="Classroom 4">
+            <img src="images/new-image1.jpg" alt="Classroom 5"> <!-- New Image -->
+            <img src="images/new-image2.jpg" alt="Classroom 6"> <!-- New Image -->
+        </div>
+        <div class="carousel-controls">
+            <button onclick="prevImage()">&#10094;</button>
+            <button onclick="nextImage()">&#10095;</button>
+        </div>
+    </section>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelector('.carousel-images');
+        const imageCount = images.children.length;
+
+        function showImage(index) {
+            images.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % imageCount;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + imageCount) % imageCount;
+            showImage(currentIndex);
+        }
+
+        // Auto-slide every 4 seconds
+        setInterval(nextImage, 4000);
+    </script>
+
+    <!-- Multiple Images Section -->
+    <section class="multiple-images">
+        <div class="image-container">
+            <img src="images/OIP (1).jpeg" alt="Classroom 1" class="image-item">
+            <img src="images/Classroom-Management-for-an-Effective-Learning-Environment-scaled.jpg" alt="Classroom 2" class="image-item">
+            <img src="images/OIP.jpeg" alt="Classroom 3" class="image-item">
+        </div>
+    </section>
+    
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Miracle English Academy</h1>
+            <p>Your gateway to mastering English with confidence.</p>
+            <a href="#courses" class="cta-button">Explore Courses</a>
+        </div>
+    </header>
+    
+    <main>
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Miracle English Academy is dedicated to empowering students with excellent English communication skills.</p>
+            <img src="images/OIP.jpeg" alt="Classroom environment" class="section-image">
+        </section>
+        <section id="courses" class="courses">
+            <h2>Our Courses</h2>
+            <div class="course">
+                <img src="images/OIP (1).jpeg" alt="Spoken English class" class="course-image">
+                <h3>Spoken English</h3>
+                <p>Enhance your speaking skills for daily conversations.</p>
+            </div>
+            <div class="course">
+                <img src="images/business-english.jpg" alt="Business English class" class="course-image">
+                <h3>Business English</h3>
+                <p>Learn professional English for your career growth.</p>
+            </div>
+            <div class="course">
+                <img src="images/ielts.jpg" alt="IELTS preparation class" class="course-image">
+                <h3>IELTS Preparation</h3>
+                <p>Score high with our expert training programs.</p>
+            </div>
+        </section>
+        <section class="testimonials">
+            <h2>What Our Students Say</h2>
+            <img src="images/testimonials.jpg" alt="Happy students" class="section-image">
+            <p>"This academy transformed my confidence!" – Student A</p>
+            <p>"Amazing teaching methods and supportive staff!" – Student B</p>
+        </section>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <img src="images/contact.jpg" alt="Contact us" class="section-image">
+        </section>
+    </main>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <img src="images/OIP (2).jpeg" alt="Miracle English Academy Logo" class="nav-logo">
+                Miracle English Academy Betul
+            </a>
+            <ul class="navbar-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="login.html" class="login-button">Login</a></li> <!-- Added Login Button -->
+            </ul>
+            <!-- Hamburger Menu Icon for Mobile Devices -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <footer>
+        <p>&copy; 2024 Miracle English Academy. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
